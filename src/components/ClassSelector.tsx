@@ -1,4 +1,4 @@
-import type { BuildingClass, ClassSelectorProps, ClassButtonConfig } from '../types';
+import type { ClassSelectorProps, ClassButtonConfig } from '../types';
 
 const classButtons: ClassButtonConfig[] = [
   {
