@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { BuildingClass, ClassSelectorProps, ClassButtonConfig } from '../types';
+import type {ClassSelectorProps, ClassButtonConfig } from '../types';
 
 const mainButtons: ClassButtonConfig[] = [
   {
