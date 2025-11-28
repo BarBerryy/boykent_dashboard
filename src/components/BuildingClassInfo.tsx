@@ -56,7 +56,7 @@ const BuildingClassInfo = ({ buildingClass }: BuildingClassInfoProps) => {
           </div>
         </div>
         <div className="mt-4 p-4 bg-white rounded-lg">
-          <h5 className="font-semibold text-gray-700 mb-2">🎯 Ключевые Динамика025:</h5>
+          <h5 className="font-semibold text-gray-700 mb-2">🎯 Ключевые тренды 2025:</h5>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div className="p-3 bg-teal-50 rounded">
               <strong>Евроформаты:</strong> 27% квартир (1+ и 2+) — кухня-гостиная + спальни

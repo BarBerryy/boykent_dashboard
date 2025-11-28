@@ -37,40 +37,31 @@ const ComparisonTable = () => {
               <td className="border border-gray-300 px-4 py-3 text-center">50.78 м²</td>
             </tr>
             <tr>
-              <td className="border border-gray-300 px-4 py-3 font-semibold">Кол-во квартир</td>
+              <td className="border border-gray-300 px-4 py-3 font-semibold">Общая площадь</td>
+              <td className="border border-gray-300 px-4 py-3 text-center">32 500 м²</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">32 500 м²</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-purple-50 font-bold">32 500 м²</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-teal-50 font-bold">32 500 м²</td>
+              <td className="border border-gray-300 px-4 py-3 text-center">32 500 м²</td>
+              <td className="border border-gray-300 px-4 py-3 text-center">32 500 м²</td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 px-4 py-3 font-semibold">Расч. кол-во квартир</td>
               <td className="border border-gray-300 px-4 py-3 text-center">640</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">640</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-purple-50 font-bold">660</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-teal-50 font-bold">660</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">520</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-purple-50 font-bold">580</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-teal-50 font-bold">661</td>
               <td className="border border-gray-300 px-4 py-3 text-center">640</td>
               <td className="border border-gray-300 px-4 py-3 text-center">640</td>
             </tr>
             <tr>
-              <td className="border border-gray-300 px-4 py-3 font-semibold">Маржинальность</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">35%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">42%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-purple-50 font-bold">39%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-teal-50 font-bold">40%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">38%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">40%</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-300 px-4 py-3 font-semibold">Ликвидность</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">85%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">88%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-purple-50 font-bold">92%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-teal-50 font-bold">93%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">80%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">70%</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-300 px-4 py-3 font-semibold">Доля студий</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">10%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">5%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-purple-50 font-bold">8%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center bg-teal-50 font-bold">10%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">6%</td>
-              <td className="border border-gray-300 px-4 py-3 text-center">2%</td>
+              <td className="border border-gray-300 px-4 py-3 font-semibold">Выручка</td>
+              <td className="border border-gray-300 px-4 py-3 text-center">$52M</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">$56.9M</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-purple-50 font-bold">$54.6M</td>
+              <td className="border border-gray-300 px-4 py-3 text-center bg-teal-50 font-bold">$55.3M</td>
+              <td className="border border-gray-300 px-4 py-3 text-center">$58.5M</td>
+              <td className="border border-gray-300 px-4 py-3 text-center">$71.5M</td>
             </tr>
           </tbody>
         </table>
