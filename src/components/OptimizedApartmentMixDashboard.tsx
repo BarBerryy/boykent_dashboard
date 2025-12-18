@@ -47,7 +47,6 @@ const OptimizedApartmentMixDashboard = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-blue-50 to-purple-50">
         <div className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md">
           <div className="text-center mb-8">
-            <div className="text-6xl mb-4">🏢</div>
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
               ЖК "Бойкент"
             </h1>
@@ -85,7 +84,6 @@ const OptimizedApartmentMixDashboard = () => {
           </form>
 
           <div className="mt-6 text-center text-sm text-gray-500">
-            <p>🔒 Защищенный доступ</p>
           </div>
         </div>
       </div>
