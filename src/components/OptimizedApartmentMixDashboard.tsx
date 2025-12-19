@@ -16,9 +16,7 @@ import DetailModal from './DetailModal';
 
 const OptimizedApartmentMixDashboard = () => {
   // 🔐 Все useState должны быть ВНАЧАЛЕ (до любых условий)
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
-    return sessionStorage.getItem('boykent_auth') === 'true'; // ✅ sessionStorage
-  });
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false); // ✅ Всегда false при загрузке
   const [passwordInput, setPasswordInput] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [buildingClass, setBuildingClass] = useState<BuildingClass>('new_optimal');
@@ -30,7 +28,6 @@ const OptimizedApartmentMixDashboard = () => {
     e.preventDefault();
     if (passwordInput === CORRECT_PASSWORD) {
       setIsAuthenticated(true);
-      sessionStorage.setItem('boykent_auth', 'true'); // ✅ sessionStorage
       setError('');
     } else {
       setError('Неверный пароль');
@@ -40,7 +37,6 @@ const OptimizedApartmentMixDashboard = () => {
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    sessionStorage.removeItem('boykent_auth'); // ✅ sessionStorage
   };
 
   // Вычисляемые значения ПОСЛЕ всех useState
@@ -94,7 +90,7 @@ const OptimizedApartmentMixDashboard = () => {
 
           <div className="mt-6 text-center text-sm text-gray-500">
             <p>🔒 Защищенный доступ</p>
-            <p className="text-xs mt-2">Пароль действителен до закрытия вкладки</p>
+            <p className="text-xs mt-2">Пароль нужно вводить при каждом открытии страницы</p>
           </div>
         </div>
       </div>
@@ -116,7 +112,7 @@ const OptimizedApartmentMixDashboard = () => {
       </div>
 
       <div className="bg-white rounded-xl shadow-2xl p-8">
-        {/* Остальной ваш код без изменений */}
+        {/* Заголовок */}
         <div className="text-center mb-6">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
             Планируемая квартирография ЖК "Бойкент" 💚
@@ -126,12 +122,15 @@ const OptimizedApartmentMixDashboard = () => {
           </p>
         </div>
 
+        {/* Выбор класса жилья */}
         <ClassSelector currentClass={buildingClass} onClassChange={setBuildingClass} />
 
+        {/* Описание */}
         <p className="text-center text-gray-600 mb-8 text-lg italic">
           {currentData.description}
         </p>
 
+        {/* Ключевые метрики */}
         <MetricsCards
           totalUnits={currentData.totalUnits}
           totalArea={currentData.totalArea}
@@ -139,13 +138,16 @@ const OptimizedApartmentMixDashboard = () => {
           marginPercent={currentMetrics.marginPercent}
         />
 
+        {/* Сравнительный анализ */}
         <ComparisonChart data={comparisonData} visible={showComparisonChart} />
 
+        {/* Графики */}
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <PieChartSection data={currentData.mix} />
           <BarChartSection data={areaRanges} />
         </div>
 
+        {/* Детальная таблица */}
         <DetailedTable
           mix={currentData.mix}
           totalUnits={currentData.totalUnits}
@@ -154,10 +156,13 @@ const OptimizedApartmentMixDashboard = () => {
           pricePerSqm={currentMetrics.pricePerSqm}
         />
 
+        {/* Финансовые показатели */}
         <FinancialMetricsSection metrics={currentMetrics} totalArea={currentData.totalArea} />
 
+        {/* Информация о классе */}
         <BuildingClassInfo buildingClass={buildingClass} />
 
+        {/* Детальная планировка */}
         <div className="mt-8 bg-white border-2 border-indigo-200 rounded-lg p-6">
           <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
             📐 Детальная планировка квартир
@@ -173,11 +178,14 @@ const OptimizedApartmentMixDashboard = () => {
           </p>
         </div>
 
+        {/* Рекомендации */}
         <Recommendations />
 
+        {/* Сравнительная таблица */}
         <ComparisonTable />
       </div>
 
+      {/* Модальное окно */}
       <DetailModal
         showDetailModal={showDetailModal}
         setShowDetailModal={setShowDetailModal}
